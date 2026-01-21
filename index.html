@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassy Terminal Thoughts</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'terminal': ['Courier New', 'monospace'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s ease infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-terminal min-h-screen">
+    <!-- Glassy Background Elements -->
+    <canvas id="noiseCanvas"></canvas>
+    <custom-navbar></custom-navbar>
+<!-- Main Content -->
+    <main class="container mx-auto px-4 py-16 max-w-4xl">
+        <!-- Hero Section -->
+        <section class="text-center mb-24">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tighter">Glassy Terminal Thoughts</h1>
+            <p class="text-xl md:text-2xl opacity-80 mb-8">Where code meets creativity in the digital void</p>
+            
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-700 flex items-center">
+                    <i data-feather="folder" class="mr-2"></i> Projects
+                </a>
+                <a href="#contact" class="px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all border border-gray-700 flex items-center">
+                    <i data-feather="mail" class="mr-2"></i> Contact
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Posts -->
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold mb-8 border-b border-gray-700 pb-2">Latest Musings</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <article class="bg-gray-800 bg-opacity-50 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all">
+                    <h3 class="text-2xl font-bold mb-3">The Art of Minimal Code</h3>
+                    <p class="text-gray-300 mb-4">Exploring how less can be more in modern web development...</p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+                        Read more <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </article>
+                <article class="bg-gray-800 bg-opacity-50 rounded-xl p-6 border border-gray-700 hover:border-gray-600 transition-all">
+                    <h3 class="text-2xl font-bold mb-3">Terminal Aesthetics</h3>
+                    <p class="text-gray-300 mb-4">Why monospace fonts make everything look more serious...</p>
+                    <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+                        Read more <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-24">
+            <h2 class="text-3xl font-bold mb-8 border-b border-gray-700 pb-2">Projects</h2>
+            <div class="space-y-6">
+                <div class="bg-gray-800 bg-opacity-50 rounded-xl p-6 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-2">Glassy UI Framework</h3>
+                    <p class="text-gray-300 mb-4">A CSS framework for creating frosted glass effects with pure CSS.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">CSS</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Design</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 bg-opacity-50 rounded-xl p-6 border border-gray-700">
+                    <h3 class="text-2xl font-bold mb-2">Terminal Blog Engine</h3>
+                    <p class="text-gray-300 mb-4">A markdown-based blog system with terminal-style output.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Node.js</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Markdown</span>
+                        <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">CLI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 border-b border-gray-700 pb-2">Contact</h2>
+            <div class="bg-gray-800 bg-opacity-50 rounded-xl p-6 border border-gray-700">
+                <p class="mb-6">Want to collaborate or just say hello? Reach out through any of these channels:</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center">
+                        <i data-feather="mail" class="mr-2"></i> Email
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center">
+                        <i data-feather="github" class="mr-2"></i> GitHub
+                    </a>
+                    <a href="#" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center">
+                        <i data-feather="twitter" class="mr-2"></i> Twitter
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>© 2023 Glassy Terminal Thoughts. All thoughts are my own.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+<script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+</body>
+</html>

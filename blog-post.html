@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Glassy Terminal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'terminal': ['Courier New', 'monospace'],
+                    },
+                    animation: {
+                        'gradient': 'gradient 8s ease infinite',
+                    },
+                    keyframes: {
+                        gradient: {
+                            '0%, 100%': { 'background-position': '0% 50%' },
+                            '50%': { 'background-position': '100% 50%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-terminal min-h-screen">
+    <!-- Glassy Background Elements -->
+    <canvas id="noiseCanvas"></canvas>
+    
+    <!-- Navbar -->
+    <custom-navbar></custom-navbar>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pt-24 pb-16 max-w-4xl">
+        <blog-post>
+            <span slot="title">The Art of Minimal Code</span>
+            <span slot="date">June 1, 2023</span>
+            <span slot="read-time">5 min read</span>
+            <div slot="content">
+                <p>In the world of modern web development, minimalism isn't just an aesthetic choice—it's a philosophy that can lead to more maintainable, performant, and elegant solutions.</p>
+                
+                <img src="http://static.photos/technology/1024x576/42" alt="Minimal code example" class="rounded-lg my-6">
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4">The Power of Less</h2>
+                <p>When we strip away unnecessary complexity, we're left with code that's easier to understand, debug, and extend. Consider this simple React component:</p>
+                
+                <div class="code-block">
+                    <pre><code>const Button = ({ children, onClick }) => (
+    &lt;button 
+        className="px-4 py-2 bg-blue-600 rounded"
+        onClick={onClick}
+    &gt;
+        {children}
+    &lt;/button&gt;
+);</code></pre>
+                </div>
+                
+                <p>Versus an over-engineered alternative with unnecessary props and abstractions. The minimal version is immediately understandable and does exactly what it needs to do.</p>
+                
+                <h2 class="text-2xl font-bold mt-8 mb-4">Performance Benefits</h2>
+                <p>Less code means smaller bundle sizes, faster downloads, and quicker parsing by the browser. In a world where performance directly impacts user experience and SEO, minimalism pays dividends.</p>
+            </div>
+        </blog-post>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>© 2023 Glassy Terminal Thoughts. All thoughts are my own.</p>
+    </footer>
+
+    <script src="components/navbar.js"></script>
+    <script src="components/blog-post.js"></script>
+    <script src="script.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
