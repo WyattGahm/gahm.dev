@@ -51,13 +51,17 @@ class BlogPost extends HTMLElement {
                 }
                 
                 .code-block {
-                    background: rgba(17, 24, 39, 0.7);
+                    background: transparent !important;
                     border-radius: 0.5rem;
                     padding: 1rem;
                     margin: 1.5rem 0;
                     overflow-x: auto;
                     border: 1px solid rgba(55, 65, 81, 0.5);
                     font-family: 'Courier New', monospace;
+                }
+                
+                .code {
+                    background-color: rgba(0,0,0,0);
                 }
                 
                 @media (max-width: 768px) {

@@ -53,9 +53,9 @@ class CustomNavbar extends HTMLElement {
       </style>
       <nav>
         <div class="nav-container">
-          <a href="/" class="logo">Glassy Terminal</a>
+          <a href="/" class="logo">gahm.dev</a>
           <div class="nav-links">
-            <a href="/"><i data-feather="home"></i> Home</a>
+            <a href="index.html"><i data-feather="home"></i> Home</a>
             <a href="#"><i data-feather="book"></i> Blog</a>
             <a href="#projects"><i data-feather="folder"></i> Projects</a>
             <a href="#contact"><i data-feather="mail"></i> Contact</a>
