@@ -16,24 +16,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Theme toggle functionality (if needed)
-const themeToggle = document.createElement('button');
-themeToggle.className = 'fixed bottom-4 right-4 p-3 rounded-full bg-gray-800 shadow-lg';
-themeToggle.innerHTML = '<i data-feather="moon"></i>';
-themeToggle.title = 'Toggle theme';
-
-themeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    const icon = themeToggle.querySelector('i');
-    if (document.documentElement.classList.contains('dark')) {
-        icon.setAttribute('data-feather', 'moon');
-    } else {
-        icon.setAttribute('data-feather', 'sun');
-    }
-    feather.replace();
-});
-
-document.body.appendChild(themeToggle);
 // Animated noise background with shifting colors
 function createDynamicNoise() {
     const canvas = document.getElementById('noiseCanvas');
@@ -62,7 +44,7 @@ let currentColorIndex = 0;
         frameCount++;
     // Change color more frequently (every 180 frames = 3 seconds at 60fps)
         if (frameCount % 180 === 0) {
-currentColorIndex = (currentColorIndex + 1) % baseColors.length;
+            currentColorIndex = (currentColorIndex + 1) % baseColors.length;
             targetColor = baseColors[currentColorIndex];
         }
         
