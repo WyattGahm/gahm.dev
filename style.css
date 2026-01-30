@@ -1,6 +1,8 @@
 /* Custom styles that extend Tailwind */
 @import url('https://fonts.googleapis.com/css2?family=Courier+New:wght@400;700&display=swap');
 
+
+
 /* Code block styling */
 pre {
     background-color: rgba(17, 24, 39, 0.7) !important;
